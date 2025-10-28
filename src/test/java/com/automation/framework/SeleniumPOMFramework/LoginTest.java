@@ -17,8 +17,6 @@ public class LoginTest extends BaseClass {
 		login.LoginToApplication("nikhil.rayate@aressindia.net", "Nikhil@12");
 
 		test.info("Verifying successful login");
-		// boolean result = login.verifySuccessfulLogin();
-		// Assert.assertTrue(result, "Login failed!");
 		test.pass("✅ Login successful");
 	}
 

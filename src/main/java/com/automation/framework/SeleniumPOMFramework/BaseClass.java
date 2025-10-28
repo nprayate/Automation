@@ -1,22 +1,18 @@
 package com.automation.framework.SeleniumPOMFramework;
 
 import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
@@ -61,18 +57,6 @@ public class BaseClass {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 
-//	@BeforeMethod
-//	public void setUpTest() {
-//
-//	}
-
-//	@AfterClass
-//	public void tearDownBrowser() {
-//		if (driver != null) {
-//			driver.quit();
-//			System.out.println("🧹 Browser closed");
-//		}
-//	}
 
 	@AfterSuite
 	public void flushReport() {

@@ -9,7 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
 public class CreateBatch {
 
 	WebDriver driver;
@@ -20,28 +19,19 @@ public class CreateBatch {
 		PageFactory.initElements(driver, this);
 
 	}
-	
-	
-	@FindBy (xpath = "//button[text()='Enable Later']")
+
+	@FindBy(xpath = "//button[text()='Enable Later']")
 	WebElement mfa;
-	
-	
-	@FindBy (xpath = "//a[@href='admin/barcode-batches']")
+
+	@FindBy(xpath = "//a[@href='admin/barcode-batches']")
 	WebElement batches;
-	
-	
+
 	public void batchAction() {
-		
+
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOf(mfa)).click();
-		
+
 		wait.until(ExpectedConditions.elementToBeClickable(batches)).click();
 	}
-
-
-	
-	
-	
-	
 
 }
