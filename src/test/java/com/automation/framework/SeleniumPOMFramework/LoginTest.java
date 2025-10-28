@@ -15,6 +15,8 @@ public class LoginTest extends BaseClass {
 		test.info("Navigating to Login Page");
 		login = new LoginPage(driver);
 		login.LoginToApplication("nikhil.rayate@aressindia.net", "Nikhil@12");
+		
+		System.out.println("Test the changes");
 
 		test.info("Verifying successful login");
 		test.pass("✅ Login successful");
