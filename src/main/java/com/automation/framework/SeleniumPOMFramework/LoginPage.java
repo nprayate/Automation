@@ -25,8 +25,6 @@ public class LoginPage {
 	@FindBy(id = "loginform")
 	WebElement btnLogin;
 
-//	    @FindBy(id = "logout")
-//	    WebElement btnLogout;
 
 	// Actions
 	public void enterUsername(String username) {
